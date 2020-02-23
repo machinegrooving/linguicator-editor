@@ -1,5 +1,5 @@
-import { Typography } from 'antd';
 import React from 'react';
+import Header from './components/Header';
 import './App.css';
 import 'antd/dist/antd.css';
 
@@ -9,12 +9,11 @@ import 'antd/dist/antd.css';
  *
  * @component
  */
-function App() {
-  return (
-    <Typography.Paragraph>
-        Linguiçator Editor is born!
-    </Typography.Paragraph>
-  );
+function App()
+{
+    return (
+        <Header />
+    );
 }
 
 
