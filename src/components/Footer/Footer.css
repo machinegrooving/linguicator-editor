@@ -3,7 +3,7 @@
 .footer-container {
     height: 10%;
     width: 100%;
-    background-color: #492540;
+    background-color: #f3d7ca;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,15 +14,15 @@
     margin: 10px;
     font-family: Sacramento, cursive;
     font-size: 30px;
-    color: #c03546;
+    color: #a7425c;
 }
 
 .footer-container a {
     text-decoration: none;
-    color: #f6ea8c;
+    color: #a7425c;
 }
 
 .footer-container a:hover {
     text-decoration: underline;
-    color: #f6ea8c;
+    color: #432f44;
 }

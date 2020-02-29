@@ -18,16 +18,16 @@ function Header()
                     src={Logo}
                     alt="Linguiçator Logo"
                 />
-                <h1>Linguiçator</h1>
+                <h1>Lingüiçator</h1>
             </div>
             <div className="header-carret">
                 <Popover
-                    content={<p style={{ color: '#c03546' }}>Coming soon</p>}
+                    content={<p style={{ color: '#a7425c' }}>Coming soon</p>}
                     trigger="hover"
                 >
                     <Icon
                         type="setting"
-                        style={{ fontSize: '25px', color: '#c03546' }}
+                        style={{ fontSize: '25px', color: '#a7425c' }}
                     />
                 </Popover>
             </div>
