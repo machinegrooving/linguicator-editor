@@ -1,4 +1,5 @@
 import React from 'react';
+import Content from './components/Content';
 import Header from './components/Header';
 import './App.css';
 import 'antd/dist/antd.css';
@@ -12,7 +13,10 @@ import 'antd/dist/antd.css';
 function App()
 {
     return (
-        <Header />
+        <div className='app-container'>
+            <Header />
+            <Content />
+        </div>
     );
 }
 
