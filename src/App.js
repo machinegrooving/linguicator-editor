@@ -2,6 +2,11 @@ import { Typography } from 'antd';
 import React from 'react';
 
 
+/**
+ * App components aggregator.
+ *
+ * @component
+ */
 function App() {
   return (
     <Typography.Paragraph>
@@ -9,5 +14,6 @@ function App() {
     </Typography.Paragraph>
   );
 }
+
 
 export default App;
