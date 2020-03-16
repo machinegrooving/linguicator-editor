@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Spartan&display=swap');
+
+.content-container {
+    height: 100%;
+    background-color: #492540;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    max-height: 80%;
+}
+
+.content-editor, .content-display
+{
+    background-color: #ca707b;
+    height: 95%;
+    width: 49%;
+    margin: 10px 10px;
+    resize: none;
+    border-radius: 1%;
+    border: none;
+    border-color: Transparent;
+    padding: 15px 15px;
+    color: #f6ea8c;
+    font-family: spartan, Arial, Helvetica, sans-serif;
+}
+
+.content-display
+{
+    word-break: break-all;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    list-style-position: inside;
+}
+
+.content-editor:focus {
+    border: none;
+    outline: none
+}
+
+.content-editor::selection {
+    background-color: #222;
+    color: white;
+}
+
+.content-display:focus {
+    border: none;
+    outline: none
+}
