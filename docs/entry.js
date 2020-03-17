@@ -28,5 +28,8 @@ reactComponents['App'] = Component0;
 import Component1 from '../src/components/Content/index.js';
 reactComponents['Content'] = Component1;
 
-import Component2 from '../src/components/Header/index.js';
-reactComponents['Header'] = Component2;
+import Component2 from '../src/components/Footer/index.js';
+reactComponents['Footer'] = Component2;
+
+import Component3 from '../src/components/Header/index.js';
+reactComponents['Header'] = Component3;
