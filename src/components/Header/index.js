@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import Identity from './Identity';
 import Logo from "./logo.png";
 import StatusIndicator from './StatusIndicator';
 import PropTypes from 'prop-types';
@@ -50,13 +51,10 @@ function Header({socketState})
 
     return (
         <header className="header-container">
-            <div className="header-identity">
-                <img
-                    src={Logo}
-                    alt="Linguiçator Logo"
-                />
-                <h1>Lingüiçator</h1>
-            </div>
+            <Identity
+                logo={Logo}
+                brand={"Lingüiçator"}
+            />
             <div className="header-carret">
                 <StatusIndicator
                     color={colorCode}
