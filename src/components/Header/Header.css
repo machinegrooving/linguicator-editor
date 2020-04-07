@@ -39,3 +39,10 @@
     align-items: center;
     margin-right: 5%;
 }
+
+.connection-status {
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
