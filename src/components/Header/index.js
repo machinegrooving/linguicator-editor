@@ -1,7 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Identity from './Identity';
-import Logo from "./logo.png";
+import Logo from './logo.png';
+import Settings from './Settings';
 import StatusIndicator from './StatusIndicator';
 import PropTypes from 'prop-types';
 import './Header.css'
@@ -60,15 +61,7 @@ function Header({socketState})
                     color={colorCode}
                     message={status}
                 />
-                <Popover
-                    content={<p style={{ color: '#a7425c' }}>Coming soon</p>}
-                    trigger="hover"
-                >
-                    <Icon
-                        type="setting"
-                        style={{ fontSize: '25px', color: '#a7425c' }}
-                    />
-                </Popover>
+                <Settings />
             </div>
         </header>
     );
