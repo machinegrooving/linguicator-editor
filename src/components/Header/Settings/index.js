@@ -1,5 +1,7 @@
 import React from 'react';
-import { Icon, Popover } from 'antd';
+import { SettingFilled } from '@ant-design/icons';
+import { Typography, Icon, Popover, Slider } from 'antd';
+import 'antd/dist/antd.css';
 
 
 /**
@@ -11,12 +13,34 @@ function Settings()
 {
     return(
         <Popover
-            content={<p style={{ color: '#a7425c' }}>Coming soon</p>}
+            content={
+                <div>
+                    <center>
+                        <Typography.Text
+                            style={{
+                                color: '#a7425c'
+                            }}
+                        >
+                            Prediction size:
+                        </Typography.Text>
+                    </center>
+                    <Slider
+                        min={20}
+                        max={150}
+                        defaultValue={75}
+                        style={{
+                            minWidth: 100,
+                        }}
+                        tooltipPlacement={"bottom"}
+                    >
+                    </Slider>
+            </div>
+            }
             trigger="hover"
         >
             <Icon
-                type="setting"
-                style={{ fontSize: '25px', color: '#a7425c' }}
+                component={SettingFilled}
+                style={{ fontSize: '20px', color: '#a7425c' }}
             />
         </Popover>
     );
