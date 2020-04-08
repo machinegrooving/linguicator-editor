@@ -4,6 +4,7 @@ import Identity from './Identity';
 import Logo from './logo.png';
 import Settings from './Settings';
 import StatusIndicator from './StatusIndicator';
+import Predictor from './Predictor';
 import PropTypes from 'prop-types';
 import './Header.css'
 
@@ -61,6 +62,7 @@ function Header({socketState})
                     color={colorCode}
                     message={status}
                 />
+                <Predictor />
                 <Settings />
             </div>
         </header>
