@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
 
+html {
+    --antd-wave-shadow-color:  #a7425c;
+}
+
+::selection {
+    background: #a7425c;
+    color: #a7425c;
+    text-shadow: none;
+    text-decoration: none;
+}
+
 .header-container {
     height: 10%;
     width: 100%;
@@ -44,5 +55,76 @@
     height: 15px;
     width: 15px;
     margin-right: 10px;
-    border-radius: 50%;
+    border-radius: 100%;
+}
+
+.ant-slider-track {
+    background-color: #a7425c;
+}
+
+.ant-slider-track:hover {
+    background-color: #a7425c;
+    border: solid 2px #a7425c;
+}
+
+.ant-slider-mark:hover {
+    background-color: #a7425c;
+    border: solid 2px #a7425c;
+}
+
+.ant-slider-handle {
+    border: solid 2px #a7425c;
+}
+
+.ant-slider-track {
+    border: solid 2px #a7425c;
+    color: #a7425c;
+}
+
+.ant-slider-handle:focus {
+    border: solid 2px #a7425c;
+    color: #a7425c;
+}
+
+.ant-slider-handle.ant-tooltip-open {
+    border: solid 2px #a7425c;
+    color: #a7425c;
+}
+
+.ant-slider-rail {
+    border: solid 2px #a7425c;
+    color: #a7425c;
+}
+
+.ant-slider-handle-click-focused {
+    border: solid 2px #a7425c;
+    color: #a7425c;
+}
+
+.ant-slider-handle:focus {
+    color: #a7425c;
+    border: solid 2px #a7425c;
+    box-shadow: none;
+}
+
+.ant-slider-handle-click-focused::selection {
+    background: #a7425c;
+    color: #a7425c;
+    border: solid 2px #a7425c;
+    box-shadow: none;
+}
+
+.ant-slider-handle-click-focused:hover {
+    border: solid 2px #a7425c;
+    color: #a7425c;
+}
+
+.ant-slider-handle ant-tooltip-open {
+    border: solid 2px #a7425c;
+    color: #a7425c;
+}
+
+.ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+    border: solid 2px #a7425c;
+    color: #a7425c;
 }
