@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/icons": "^4.0.5",
     "antd": "^3.26.11",
     "dompurify": "^2.0.8",
     "express": "^4.17.1",
