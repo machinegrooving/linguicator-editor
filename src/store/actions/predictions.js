@@ -5,7 +5,8 @@
  *
  * @returns {object} - action to be dispatched
  */
-function setMaxSize(size) {
+function setMaxSize(size)
+{
     return {
         type: 'SET_MAX_SIZE',
         payload: {
