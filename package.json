@@ -38,6 +38,7 @@
   },
   "devDependencies": {
     "better-docs": "^1.4.7",
-    "jsdoc": "^3.6.3"
+    "jsdoc": "^3.6.3",
+    "redux-devtools-extension": "^2.13.8"
   }
 }
