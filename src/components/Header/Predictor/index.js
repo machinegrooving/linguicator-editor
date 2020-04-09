@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { Popover, Icon } from 'antd';
 import { ReactComponent as Salami } from '../salami.svg';
 
@@ -10,6 +11,9 @@ import { ReactComponent as Salami } from '../salami.svg';
  */
 function Predictor()
 {
+    // component state hooks
+    const shouldSpin = useSelector(state => state.predictions.isPredicting);
+
     return(
         <Popover
             content={
@@ -32,7 +36,7 @@ function Predictor()
                         fontSize: '45px',
                         marginRight: 10,
                     }}
-                    spin={false}
+                    spin={shouldSpin}
                 />
         </Popover>
     );
