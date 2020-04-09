@@ -34,7 +34,22 @@ function setIdleTime(time)
 }
 
 
+/**
+ * I reset the current prediction.
+ *
+ * @returns {object} - action to be dispatched
+ */
+function resetPrediction()
+{
+    return {
+        type: 'RESET_PREDICTION',
+        payload: {}
+    }
+}
+
+
 export {
     setMaxSize,
-    setIdleTime
+    setIdleTime,
+    resetPrediction
 }
