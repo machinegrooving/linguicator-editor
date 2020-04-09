@@ -54,6 +54,12 @@ function App()
             setSocketState(socket.current.readyState);
         }
 
+        // on websocket message received event callback
+        socket.current.onmessage = (event) =>
+        {
+            console.log(`Received: "${event.data}"`);
+        };
+
         // cleanup on lifecycle end
         return () => socket.current.close();
 
@@ -64,7 +70,7 @@ function App()
         <Provider store = {store}>
             <div className='app-container'>
                 <Header socketState = {socketState}/>
-                <Content />
+                <Content socket = {socket.current}/>
                 <Footer />
             </div>
         </Provider>
