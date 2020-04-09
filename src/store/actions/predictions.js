@@ -16,6 +16,25 @@ function setMaxSize(size)
 }
 
 
+/**
+ * I update idle time until predictions are scheduled.
+ *
+ * @param {number} time - time until predictions in miliseconds
+ *
+ * @returns {object} - action to be dispatched
+ */
+function setIdleTime(time)
+{
+    return {
+        type: 'SET_IDLE_TIME',
+        payload: {
+            time
+        }
+    };
+}
+
+
 export {
-    setMaxSize
+    setMaxSize,
+    setIdleTime
 }
