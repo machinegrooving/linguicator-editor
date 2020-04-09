@@ -2,6 +2,7 @@
  * Predictions store initial state.
  */
 const INITIAL_STATE = {
+    expectedId: null,
     hasPrediction: false,
     idleTime: 3000,
     isPredicting: false,
@@ -38,6 +39,12 @@ function predictions(state = INITIAL_STATE, action)
                 expectedId: null,
                 prediction: '',
                 hasPrediction: false
+            }
+        case 'WAIT_PREDICTION':
+            return {
+                ...state,
+                isPredicting: true,
+                expectedId: action.payload.id
             }
         default:
             return state;
