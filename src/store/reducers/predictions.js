@@ -2,8 +2,11 @@
  * Predictions store initial state.
  */
 const INITIAL_STATE = {
+    hasPrediction: false,
+    idleTime: 3000,
+    isPredicting: false,
     maxSize: 75,
-    idleTime: 3000
+    prediction: ''
 };
 
 
@@ -27,6 +30,14 @@ function predictions(state = INITIAL_STATE, action)
             return {
                 ...state,
                 idleTime: action.payload.time
+            }
+        case 'RESET_PREDICTION':
+            return {
+                ...state,
+                isPredicting: false,
+                expectedId: null,
+                prediction: '',
+                hasPrediction: false
             }
         default:
             return state;
