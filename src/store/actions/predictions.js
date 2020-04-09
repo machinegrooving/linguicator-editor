@@ -48,8 +48,27 @@ function resetPrediction()
 }
 
 
+/**
+ * I wait for a prediction from backstage.
+ *
+ * @param {string} id - expected prediction id
+ *
+ * @returns {object} - action to be dispatched
+ */
+function waitPrediction(id)
+{
+    return {
+        type: 'WAIT_PREDICTION',
+        payload: {
+            id
+        }
+    }
+}
+
+
 export {
     setMaxSize,
     setIdleTime,
-    resetPrediction
+    resetPrediction,
+    waitPrediction
 }
