@@ -58,6 +58,12 @@ html {
     border-radius: 100%;
 }
 
+.settings-separator {
+    background-color: #432f44;
+    height: 1px;
+    border: 0;
+}
+
 .ant-slider-track {
     background-color: #a7425c;
 }
