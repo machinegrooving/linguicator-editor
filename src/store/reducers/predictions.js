@@ -2,8 +2,9 @@
  * Predictions store initial state.
  */
 const INITIAL_STATE = {
-    'maxSize': 75
-}
+    maxSize: 75,
+    idleTime: 3000
+};
 
 
 /**
@@ -22,6 +23,11 @@ function predictions(state = INITIAL_STATE, action)
                 ...state,
                 maxSize: action.payload.size
             };
+        case 'SET_IDLE_TIME':
+            return {
+                ...state,
+                idleTime: action.payload.time
+            }
         default:
             return state;
     }
