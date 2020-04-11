@@ -143,6 +143,17 @@ function Content({socket})
         updateSchedule();
     }
 
+    function onKeyDown(event)
+    {
+        if(event.keyCode === 9)
+        {
+            event.preventDefault();
+            setText(text + predictor.prediction);
+            dispatch(resetPrediction());
+        }
+
+    }
+
 
     return (
         <div className="content-container">
@@ -151,6 +162,7 @@ function Content({socket})
                 className="content-editor"
                 value={text}
                 onChange={onTextChange}
+                onKeyDown={onKeyDown}
             >
             </textarea>
             <div
