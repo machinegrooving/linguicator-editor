@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { resetPrediction } from '../../store/actions/predictions';
+import { resetPrediction, showHint } from '../../store/actions/predictions';
 import { waitPrediction } from '../../store/actions/predictions';
 import { sanitize } from 'dompurify';
 import { v4 as uuidv4 } from 'uuid';
@@ -31,6 +31,43 @@ function Content({socket})
     {
         setPreview(sanitize(marked(text)));
     }, [text]);
+
+
+    /**
+     * I set the callback for on message events on my socket.
+     */
+    useEffect(() =>
+    {
+        // socket connection is established: set on message event callback
+        if (socket !== null)
+        {
+            socket.onmessage = (event) =>
+            {
+                // parse message data into object
+                const prediction = JSON.parse(event.data);
+
+                // handle received prediction
+                handlePrediction(prediction);
+            }
+        }
+    });
+
+
+    /**
+     * I handle an incoming prediction from backstage.
+     *
+     * @param {object} prediction - received prediction
+     *
+     * @returns {undefined} - nothing
+     */
+    function handlePrediction(prediction)
+    {
+        // prediction is expected: show it as hint
+        if (prediction.id === predictor.expectedId)
+        {
+            dispatch(showHint(prediction.data));
+        }
+    }
 
 
     /**
