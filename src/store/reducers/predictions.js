@@ -46,6 +46,13 @@ function predictions(state = INITIAL_STATE, action)
                 isPredicting: true,
                 expectedId: action.payload.id
             }
+        case 'SHOW_HINT':
+            return {
+                ...state,
+                prediction: action.payload.prediction,
+                isPredicting: false,
+                hasPrediction: true
+            }
         default:
             return state;
     }
