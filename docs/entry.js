@@ -33,3 +33,15 @@ reactComponents['Footer'] = Component2;
 
 import Component3 from '../src/components/Header/index.js';
 reactComponents['Header'] = Component3;
+
+import Component4 from '../src/components/Header/Identity/index.js';
+reactComponents['Identity'] = Component4;
+
+import Component5 from '../src/components/Header/Predictor/index.js';
+reactComponents['Predictor'] = Component5;
+
+import Component6 from '../src/components/Header/Settings/index.js';
+reactComponents['Settings'] = Component6;
+
+import Component7 from '../src/components/Header/StatusIndicator/index.js';
+reactComponents['StatusIndicator'] = Component7;
