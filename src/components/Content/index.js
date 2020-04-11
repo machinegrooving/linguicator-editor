@@ -77,6 +77,15 @@ function Content({socket})
      */
     function askForPrediction()
     {
+        // build prediction prefix
+        const prefix = text.slice(-300);
+
+        // no input string: abort
+        if (prefix === '')
+        {
+            return;
+        }
+
         // generate prediction request id
         const id = uuidv4();
 
@@ -88,7 +97,7 @@ function Content({socket})
             id,
             resource: '/predict',
             data: {
-                text,
+                text: prefix,
                 length: predictor.maxSize
             }
         });
