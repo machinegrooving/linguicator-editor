@@ -12,7 +12,7 @@ import { ReactComponent as Salami } from '../salami.svg';
 function Predictor()
 {
     // component state hooks
-    const shouldSpin = useSelector(state => state.predictions.isPredicting);
+    const predictor = useSelector(state => state.predictions);
 
     return(
         <Popover
@@ -21,14 +21,14 @@ function Predictor()
                     color: '#432f44'
                 }}
                 >
-                    {'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}
+                    {predictor.prediction}
                 </p>
             }
+            visible = {predictor.hasPrediction}
             placement="bottomRight"
             style={{
                 color: '#a7425c'
             }}
-            align={{offset: [0, -5]}}
         >
                 <Icon
                     component={Salami}
@@ -36,7 +36,7 @@ function Predictor()
                         fontSize: '45px',
                         marginRight: 10,
                     }}
-                    spin={shouldSpin}
+                    spin={predictor.isPredicting}
                 />
         </Popover>
     );
