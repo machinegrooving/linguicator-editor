@@ -66,9 +66,28 @@ function waitPrediction(id)
 }
 
 
+/**
+ * I show a prediction hint.
+ *
+ * @param {string} prediction - prediction text
+ *
+ * @returns {object} - action to be dispatched
+ */
+function showHint(prediction)
+{
+    return {
+        type: 'SHOW_HINT',
+        payload: {
+            prediction
+        }
+    }
+}
+
+
 export {
     setMaxSize,
     setIdleTime,
     resetPrediction,
-    waitPrediction
+    waitPrediction,
+    showHint
 }
