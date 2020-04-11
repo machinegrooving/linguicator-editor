@@ -134,3 +134,11 @@ html {
     border: solid 2px #a7425c;
     color: #a7425c;
 }
+
+.ant-popover {
+    max-width: 200px;
+}
+
+.ant-popover p {
+    margin-bottom: 5px;
+}
